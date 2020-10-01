@@ -3,7 +3,7 @@
   "description": "M18 profitbase export",
   "version": "0.1.0",
   "require-dev": {
-    "phpunit/phpunit": "^8"
+    "phpunit/phpunit": "7.*"
   },
   "autoload": {
     "psr-4": {
