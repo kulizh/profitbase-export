@@ -15,7 +15,7 @@ class XmlHandler extends Handlers\XML
 {
 	public function getData($resultModel = null): ResultData
 	{
-		$resultModel = $this->fetch($resultModel);
+		$resultModel = parent::getData($resultModel);
 
 		while ($this->reader->name === 'offer')
 		{

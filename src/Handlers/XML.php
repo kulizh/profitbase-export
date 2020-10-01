@@ -14,27 +14,30 @@ abstract class XML
 
 	protected $reader = null;
 
-	abstract public function getData($resultModel = null): ResultData;
-
-	protected function fetch($resultModel = null): ResultData
+	public function getData($resultModel = null): ResultData
 	{
 		if (empty(self::$URL))
 		{
 			throw new Exception('No url to open');
 		}
 
-		$this->openFileStream(self::$URL);
-
 		if (is_null($resultModel))
 		{
 			$resultModel = new ResultData();
 		}
 
+		return $this->fetch($resultModel);
+	}
+
+	protected function fetch($resultModel): ResultData
+	{
+		$this->openFileStream(self::$URL);
+
 		// Переходим к узлу generation-date считываем дату генерации:
 		$this->reader->read();
 		$this->reader->read();
 
-		$generation_date_node = new \SimpleXMLElement($this->reader->readOuterXml());
+		$generation_date_node = new SimpleXMLElement($this->reader->readOuterXml());
 		$generation_date = $this->getValue($generation_date_node);
 
 		$resultModel->setDatetime($generation_date, self::$DATETIME_FORMAT);
