@@ -33,5 +33,7 @@ abstract class Model
 		{
 			throw new \Exception('Property ' . $property . ' not found');
 		}
+
+		return $this->properties[$property];
 	}
 }
