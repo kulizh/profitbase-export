@@ -4,7 +4,9 @@
 ## Подготовка к использованию
 Для получения данных необходимо реализовать метод getData() абстрактного класса M18\Profitbase\Handlers\XML. Метод возвращает объект M18\Profitbase\Models\Result\Data. 
 ```php
-public function getData(\M18\Profitbase\Models\Result\Data $data): M18\Profitbase\Models\Result\Data
+use \M18\Profitbase\Models\Result\Data as DataModel;
+
+public function getData(DataModel $data): DataModel
 {
     $data = parent::getData($data);
     /*
