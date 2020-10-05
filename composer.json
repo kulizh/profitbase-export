@@ -1,7 +1,7 @@
 {
   "name": "m18/profitbase",
   "description": "M18 profitbase export parser",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "require": {
     "phpunit/phpunit": "7.*"
   },
