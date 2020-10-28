@@ -173,6 +173,7 @@ abstract class XML
 				$complex->addProperty('name', $complex_name);
 				$complex->addProperty('location', $complex_location);
 
+				$building->addProperty('complex_id', $complex_id);
 				$building->addProperty('name', $house_name);
 				$building->addProperty('floors_total', $house_floors_total);
 				$building->addProperty('built_year', $house_built_year);
