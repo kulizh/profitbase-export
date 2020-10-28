@@ -183,7 +183,6 @@ abstract class XML
 				$status->addProperty('humanized', $status_humanized);
 
 				$resultModel->addComplex($complex);
-				$resultModel->addBuildingToComplex($building, $complex_id);
 				$resultModel->addBuilding($building);
 				$resultModel->addStatus($status);
 				$resultModel->addSpecialOffer($specialOffer);
