@@ -1,6 +1,6 @@
 <?php
 
-use M18\Profitbase\AbstractModel as Model;
+use M18\Profitbase\Models\AbstractModel as Model;
 use PHPUnit\Framework\TestCase;
 
 class ModelTest extends TestCase
