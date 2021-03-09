@@ -1,0 +1,8 @@
+<phpunit bootstrap="vendor/autoload.php">
+    <testsuites>
+        <testsuite name="Main">
+            <file>Tests/ModelTest.php</file>
+            <file>Tests/Models/RoomTest.php</file>
+        </testsuite>
+    </testsuites>
+</phpunit>
